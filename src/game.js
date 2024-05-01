@@ -1,7 +1,7 @@
 export default class Game {
   constructor (p1, p2) {
     this.p1 = p1
-    this.p2 = 'p2'
+    this.p2 = p2
     this.board = [[null, null, null], [null, null, null], [null, null, null]]
     this.player = Math.random() < 0.5 ? this.p1 : this.p2
     this.sym = 'X'
@@ -39,7 +39,7 @@ export default class Game {
       if (col[0][c] === null) { continue }
       win = win || (col[0][c] === col[1][c] && col[0][c] === col[2][c])
     }
-  
+
     return win
   }
 
